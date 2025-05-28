@@ -6,102 +6,100 @@
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 		<title>Dummy Post</title>
 	</head>
-	<body>
-		<div class="bg-[url(img/backdrop.jpg)] bg-cover bg-center w-full sm:h-full md:min-h-screen">
-			<header class="border-b-1 border-white dark:border-gray-950">
-				<nav class="mx-auto flex w-full bg-white dark:bg-gray-950 dark:md:bg-transparent md:bg-transparent items-center justify-between lg:px-8 py-5 md:py-0" aria-label="Global">
-					<a href="#" class="-m-1.5 p-1.5">
-						<span class="md:text-white dark:text-white md:dark:text-gray-900 px-3 py-3">Fullscreen</span>
-					</a>
-					<div class="flex lg:hidden">
-						<button type="button" id="navmenu" class="inline-flex items-center justify-center rounded-md p-2.5 pr-5 text-gray-700">
-							<span class="sr-only">Open main menu</span>
-							<svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-							</svg>
+	<body class="md:bg-[url(img/backdrop.jpg)] bg-no-repeat bg-cover bg-center w-full min-h-screen flex flex-col">
+		<header class="border-b-1 border-white dark:border-gray-950">
+			<nav class="mx-auto flex w-full bg-white dark:bg-gray-950 dark:md:bg-transparent md:bg-transparent items-center justify-between lg:px-8 py-5 md:py-0" aria-label="Global">
+				<a href="#" class="-m-1.5 p-1.5">
+					<span class="md:text-white dark:text-white md:dark:text-gray-900 px-3 py-3">Fullscreen</span>
+				</a>
+				<div class="flex lg:hidden">
+					<button type="button" id="navmenu" class="inline-flex items-center justify-center rounded-md p-2.5 pr-5 text-gray-700">
+						<span class="sr-only">Open main menu</span>
+						<svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+						</svg>
+					</button>
+				</div>
+				<div class="hidden lg:flex">
+					<a href="index.html" class="text-sm/6 font-semibold text-white dark:text-gray-900 px-3 py-3 hover:bg-white/30 hover:backdrop-blur-sm hover:text-gray-500">Home</a>
+					<a href="album.list.html" class="text-sm/6 font-semibold text-white dark:text-gray-900 px-3 py-3 hover:bg-white/30 hover:backdrop-blur-sm hover:text-gray-500">Alben</a>
+					<a href="blog.html" class="text-sm/6 font-semibold text-white dark:text-gray-900 px-3 py-3 hover:bg-white/30 hover:backdrop-blur-sm hover:text-gray-500">Blog</a>
+					<a href="post.html" class="text-sm/6 font-semibold px-3 py-3 bg-white/30 backdrop-blur-sm text-gray-500">Post</a>
+					<a href="page.html" class="text-sm/6 font-semibold text-white dark:text-gray-900 px-3 py-3 hover:bg-white/30 hover:backdrop-blur-sm hover:text-gray-500">Page</a>
+
+					<a href="#" class="text-sm/6 font-semibold text-gray-s00 px-3 py-3 ">Log in <span aria-hidden="true">&rarr;</span></a>
+				</div>
+			</nav>
+			<!-- Mobile menu, show/hide based on menu open state. -->
+			<div class="lg:hidden hidden" id="mobilenav" role="dialog" aria-modal="true">
+				<!-- Background backdrop, show/hide based on slide-over state. -->
+				<div class="fixed inset-0 z-10"></div>
+				<div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+					<div class="flex items-center justify-between">
+						<a href="#" class="-m-1.5 p-1.5">
+							<span class="md:text-white dark:text-white md:dark:text-gray-900 py-3">Fullscreen</span>
+						</a>
+						<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+						<span class="sr-only">Close menu</span>
+						<svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+						</svg>
 						</button>
 					</div>
-					<div class="hidden lg:flex">
-						<a href="index.html" class="text-sm/6 font-semibold text-white dark:text-gray-900 px-3 py-3 hover:bg-white/30 hover:backdrop-blur-sm hover:text-gray-500">Home</a>
-						<a href="album.list.html" class="text-sm/6 font-semibold text-white dark:text-gray-900 px-3 py-3 hover:bg-white/30 hover:backdrop-blur-sm hover:text-gray-500">Alben</a>
-						<a href="blog.html" class="text-sm/6 font-semibold text-white dark:text-gray-900 px-3 py-3 hover:bg-white/30 hover:backdrop-blur-sm hover:text-gray-500">Blog</a>
-						<a href="post.html" class="text-sm/6 font-semibold px-3 py-3 bg-white/30 backdrop-blur-sm text-gray-500">Post</a>
-						<a href="page.html" class="text-sm/6 font-semibold text-white dark:text-gray-900 px-3 py-3 hover:bg-white/30 hover:backdrop-blur-sm hover:text-gray-500">Page</a>
-
-						<a href="#" class="text-sm/6 font-semibold text-gray-s00 px-3 py-3 ">Log in <span aria-hidden="true">&rarr;</span></a>
-					</div>
-				</nav>
-				<!-- Mobile menu, show/hide based on menu open state. -->
-				<div class="lg:hidden hidden" id="mobilenav" role="dialog" aria-modal="true">
-					<!-- Background backdrop, show/hide based on slide-over state. -->
-					<div class="fixed inset-0 z-10"></div>
-					<div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white dark:bg-gray-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-						<div class="flex items-center justify-between">
-							<a href="#" class="-m-1.5 p-1.5">
-								<span class="md:text-white dark:text-white md:dark:text-gray-900 py-3">Fullscreen</span>
-							</a>
-							<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-							<span class="sr-only">Close menu</span>
-							<svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-							</svg>
-							</button>
-						</div>
-						<div class="mt-6 flow-root">
-							<div class="-my-6 divide-y divide-gray-500/10">
-								<div class="space-y-2 py-6">
-									<a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-300">Home</a>
-									<a href="album.list.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-300">Alben</a>
-									<a href="blog.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-300">Blog</a>
-									<a href="post.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-amber-700 dark:text-amber-300">Post</a>
-									<a href="page.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-300">Page</a>
-								</div>
+					<div class="mt-6 flow-root">
+						<div class="-my-6 divide-y divide-gray-500/10">
+							<div class="space-y-2 py-6">
+								<a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-300">Home</a>
+								<a href="album.list.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-300">Alben</a>
+								<a href="blog.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-300">Blog</a>
+								<a href="post.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-amber-700 dark:text-amber-300">Post</a>
+								<a href="page.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-300">Page</a>
 							</div>
 						</div>
 					</div>
 				</div>
-			</header>
-			<main>
-				<div class="bg-white dark:bg-gray-950 dark:text-white md:ml-auto max-w-4xl">
-					<article class="p-10 font-light">
-						<!-- Optional Headimage -->
-						<div class="w-full pb-5">
-							<img src="img/backdrop.jpg" />
-						</div>
-						<!-- Headline -->
-						<h1 class="text-3xl">Headline</h1>
-						<span class="italic text-gray-800 dark:text-gray-300">Subheadline</span>
-						<!-- Content -->
-						<div class="py-10 border-b-1 border-gray-400">
-							<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			</div>
+		</header>
+		<main>
+			<div class="bg-white dark:bg-gray-950 dark:text-white md:ml-auto max-w-4xl">
+				<article class="p-10 font-light">
+					<!-- Optional Headimage -->
+					<div class="w-full pb-5">
+						<img src="img/backdrop.jpg" />
+					</div>
+					<!-- Headline -->
+					<h1 class="text-3xl">Headline</h1>
+					<span class="italic text-gray-800 dark:text-gray-300">Subheadline</span>
+					<!-- Content -->
+					<div class="py-10 border-b-1 border-gray-400">
+						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 
-							<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 
-							<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+						<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
-							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
-						</div>
-						<!-- Date -->
-						<div>
-							<span class="italic">Published: 2025-05-28</span>
-						</div>
-						<!-- Tags -->
-						<div class="py-2">
-							<a href="#" class="hover:bg-amber-950 text-amber-400 text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm border border-amber-400 inline-flex items-center justify-center">Post</a>
-							<a href="#" class="hover:bg-amber-950 text-amber-400 text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm border border-amber-400 inline-flex items-center justify-center">Blog</a>
-							<a href="#" class="hover:bg-amber-950 text-amber-400 text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm border border-amber-400 inline-flex items-center justify-center">News</a>
-							<a href="#" class="hover:bg-amber-950 text-amber-400 text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm border border-amber-400 inline-flex items-center justify-center">Tag</a>
-						</div>
-						<!-- Prev / Next -->
-						<div>
+						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+					</div>
+					<!-- Date -->
+					<div>
+						<span class="italic">Published: 2025-05-28</span>
+					</div>
+					<!-- Tags -->
+					<div class="py-2">
+						<a href="#" class="hover:bg-amber-950 text-amber-400 text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm border border-amber-400 inline-flex items-center justify-center">Post</a>
+						<a href="#" class="hover:bg-amber-950 text-amber-400 text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm border border-amber-400 inline-flex items-center justify-center">Blog</a>
+						<a href="#" class="hover:bg-amber-950 text-amber-400 text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm border border-amber-400 inline-flex items-center justify-center">News</a>
+						<a href="#" class="hover:bg-amber-950 text-amber-400 text-xs font-semibold me-2 px-2.5 py-0.5 rounded-sm border border-amber-400 inline-flex items-center justify-center">Tag</a>
+					</div>
+					<!-- Prev / Next -->
+					<div>
 
-						</div>
-					</article>
-				</div>
-			</main>
-		</div>
+					</div>
+				</article>
+			</div>
+		</main>
 		<script src="js/tailwindnav.js"></script>
 	</body>
 </html>
