@@ -1,5 +1,5 @@
 {
-  "name": "minniark/basic",
+  "name": "minniark/fullscreen",
   "description": "Basic starter template for minniark",
   "type": "project",
   "license": "MIT",
@@ -8,10 +8,10 @@
     "minniark-template",
     "template"
   ],
-  "homepage": "https://github.com/cheinisch/minniark-template-basic",
+  "homepage": "https://github.com/cheinisch/minniark-template-fullscreen",
   "support": {
-    "issues": "https://github.com/cheinisch/minniark-template-basic/issues",
-    "source": "https://github.com/cheinisch/minniark-template-basic"
+    "issues": "https://github.com/cheinisch/minniark-template-fullscreen/issues",
+    "source": "https://github.com/cheinisch/minniark-template-fullscreen"
   },
   "authors": [
     {
